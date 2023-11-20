@@ -1,0 +1,43 @@
+Server-Rest Express Postgres Sequelize
+
+npm init
+npm install express
++ .gitignore node_modules
+npm install -g nodemon   (Global)
+npm install --save sequelize pg pg-hstore
+npm install --save-dev sequelize-cli
+npx sequelize-cli init
+config.json
+npx sequelize-cli db:create
+
+create tabel book
+npx sequelize-cli model:generate --name User --attributes (ex title:string,author:string,stock:number)
+npx sequelize-cli model:generate --name User --attributes title:string,author:string,stock:number,description:string
+
+npx sequelize-cli db:migrate
+
+tambah column
+npx sequelize-cli migration:generate --name migration-skeleton 
+
+create seed
+npx sequelize-cli seed:generate --name default-book
+
+running seed
+npx sequelize-cli db:seed:all
+
+add folder routes
+add folder controllers
+
+
+
+Login / Authorization
+
+create tabel user
+npx sequelize-cli model:generate --name User --attributes email:string,password:string,role:string
+
+
+npm i bcryptjs
+npm i dotenv
+npm i jsonwebtoken
+
+npx sequelize-cli seed:generate --name default-user-admin
